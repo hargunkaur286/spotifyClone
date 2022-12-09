@@ -7,9 +7,9 @@ import { useGetSongsByGenreQuery } from '../redux/services/shazamCore';
 import { genres } from '../assets/constants';
 
 const Discover = () => {
-  const dispatch = useDispatch();
-  const { genreListId } = useSelector((state) => state.player);
-  const { activeSong, isPlaying } = useSelector((state) => state.player);
+  // const dispatch = useDispatch();
+  // const { genreListId } = useSelector((state) => state.player);
+  // const { activeSong, isPlaying } = useSelector((state) => state.player);
   const { data, isFetching, error } = useGetSongsByGenreQuery(genreListId || 'POP');
 
   if (isFetching) return <Loader title="Loading songs..." />;
